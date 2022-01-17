@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class TestClassFour extends BaseTest {
     @Test
-    public void checkResult(){
+    public void checkPlusResult(){
         try {
             driver.get("https://theautomationzone.blogspot.com/");
             Thread.sleep(200);
@@ -24,6 +24,7 @@ public class TestClassFour extends BaseTest {
             buttonEquals.click();
             WebElement inputField = driver.findElement(By.xpath("//input[@id='result']"));
             String textInsideTheField = inputField.getAttribute("value");
+            Thread.sleep(1000);
             Assert.assertEquals(textInsideTheField,"25");  // we have operation like: 10 + 15 = 25.
             System.out.println("Operation 10 + 15 is successful, result is correct.");
         } catch (InterruptedException e) {

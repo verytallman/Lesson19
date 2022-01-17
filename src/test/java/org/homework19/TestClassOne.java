@@ -10,8 +10,8 @@ public class TestClassOne extends BaseTest{
     @Test
     public void uploadFile(){
         try {
-            Thread.sleep(200);
             driver.get("https://theautomationzone.blogspot.com/");
+            Thread.sleep(200);
             WebElement uploadFileButton = driver.findElement(By.xpath("//input[@class='input-file']"));
             uploadFileButton.sendKeys("C:\\Users\\Buravchik\\Desktop\\bee-on-daisy.jpg"); //please correct path of bee-on-daisy.jpg file
             WebElement submitButton = driver.findElement(By.xpath("//button[@id='submit']"));
